@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     </head>
     <body>
-        <input type="text">
+        <input type="text" id="txt1">
         <button>Mic</button>
         <button>Stop</button>
-        <button>Clear</button>
+        <button id="btn3">Clear</button>
+        <script>
+            $("#btn3").on("click", function(){
+                $("#txt1").val("")
+            });
+        </script>
     </body>
 </html>
